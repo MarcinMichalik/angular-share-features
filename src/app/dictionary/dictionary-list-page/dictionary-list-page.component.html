@@ -1,0 +1,26 @@
+<div class="mb-5">
+  <div class="flex flex-column md:align-items-center md:justify-content-between md:flex-row">
+    <div class="font-medium text-3xl text-900">Dictionary</div>
+    <div class="mt-3 md:mt-0">
+      <button pButton pRipple label="Add item" class="p-button-outlined mr-2" icon="pi pi-plus" (click)="addItem()"></button>
+    </div>
+  </div>
+</div>
+<div class="surface-card p-4 shadow-2 border-round">
+  <p-table [value]="records" [columns]="headers" [lazy]="true" (onLazyLoad)="loadItems($event)" #table>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <ng-container *ngFor="let col of columns">
+          <th>{{col.header}}</th>
+        </ng-container>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item let-columns="columns">
+      <tr>
+        <ng-container *ngFor="let col of columns">
+          <td>{{item[col.field]}}</td>
+        </ng-container>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
