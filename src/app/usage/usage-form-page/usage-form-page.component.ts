@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {SelectItem} from 'primeng/api';
 import {DialogService} from 'primeng/dynamicdialog';
-import {UsageService} from '../service/usage.service';
-import {
-  UsageDictionaryFormDialogComponent
-} from '../usage-dictionary-form-dialog/usage-dictionary-form-dialog.component';
+import {DictionaryFormDialogComponent} from '../../dictionary/dictionary-form-dialog/dictionary-form-dialog.component';
+import {DictionaryService} from '../../dictionary/service/dictionary.service';
 
 @Component({
   selector: 'app-usage-form-page',
@@ -21,16 +19,16 @@ export class UsageFormPageComponent {
   options: SelectItem[] = [];
 
   constructor(private formBuilder: FormBuilder,
-              private usageService: UsageService,
+              private dictionaryService: DictionaryService,
               private dialogService: DialogService) {
-    usageService.get().subscribe({
+    dictionaryService.get().subscribe({
       next: value => this.options = (value || []).map((value: any) => ({value, label: value.name}))
     })
   }
 
 
   addItem() {
-    const ref = this.dialogService.open(UsageDictionaryFormDialogComponent, {
+    const ref = this.dialogService.open(DictionaryFormDialogComponent, {
       header: 'Add new item',
     });
 

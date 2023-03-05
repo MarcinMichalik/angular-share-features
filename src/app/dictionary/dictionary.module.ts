@@ -28,6 +28,9 @@ import {DictionaryService} from './service/dictionary.service';
   ],
   providers: [
     DictionaryService
+  ],
+  exports: [
+    DictionaryFormDialogComponent
   ]
 })
 export class DictionaryModule {
