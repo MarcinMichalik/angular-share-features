@@ -1,14 +1,14 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import {RippleModule} from 'primeng/ripple';
-import {DictionaryModule} from '../dictionary/dictionary.module';
+import {DictionarySharedModule} from '../dictionary/dictionary-shared/dictionary-shared.module';
+import {UsageFormPageComponent} from './usage-form-page/usage-form-page.component';
 
 import {UsageRoutingModule} from './usage-routing.module';
-import {UsageFormPageComponent} from './usage-form-page/usage-form-page.component';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import {UsageFormPageComponent} from './usage-form-page/usage-form-page.componen
     ReactiveFormsModule,
     DropdownModule,
     InputTextModule,
-    DictionaryModule
+    DictionarySharedModule
   ],
 })
 export class UsageModule {
