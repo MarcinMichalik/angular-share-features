@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {SelectItem} from 'primeng/api';
 import {DialogService} from 'primeng/dynamicdialog';
-import {DictionaryFormDialogComponent} from '../../dictionary/dictionary-shared/dictionary-form-dialog/dictionary-form-dialog.component';
-import {DictionaryService} from '../../dictionary/dictionary-shared/service/dictionary.service';
+import {DictionaryFormDialogComponent} from '../../dictionary/dictionary-form-dialog/dictionary-form-dialog.component';
+import {DictionaryService} from '../../dictionary/service/dictionary.service';
 
 @Component({
   selector: 'app-usage-form-page',

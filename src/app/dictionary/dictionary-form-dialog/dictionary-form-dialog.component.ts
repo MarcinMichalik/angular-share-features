@@ -1,12 +1,22 @@
+import {NgIf} from '@angular/common';
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {ButtonModule} from 'primeng/button';
 import {DynamicDialogConfig, DynamicDialogRef} from 'primeng/dynamicdialog';
+import {InputTextModule} from 'primeng/inputtext';
 import {DictionaryService} from '../service/dictionary.service';
 
 @Component({
   selector: 'app-dictionary-form-dialog',
   templateUrl: './dictionary-form-dialog.component.html',
-  styleUrls: ['./dictionary-form-dialog.component.scss']
+  styleUrls: ['./dictionary-form-dialog.component.scss'],
+  standalone: true,
+  imports: [
+    ReactiveFormsModule,
+    InputTextModule,
+    ButtonModule,
+    NgIf
+  ],
 })
 export class DictionaryFormDialogComponent {
 

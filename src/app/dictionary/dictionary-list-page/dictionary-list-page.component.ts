@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {LazyLoadEvent} from 'primeng/api';
 import {DialogService} from 'primeng/dynamicdialog';
-import {DictionaryFormDialogComponent} from '../dictionary-shared/dictionary-form-dialog/dictionary-form-dialog.component';
-import {DictionaryService} from '../dictionary-shared/service/dictionary.service';
+import {DictionaryFormDialogComponent} from '../dictionary-form-dialog/dictionary-form-dialog.component';
+import {DictionaryService} from '../service/dictionary.service';
 
 @Component({
   selector: 'app-dictionary-list-page',

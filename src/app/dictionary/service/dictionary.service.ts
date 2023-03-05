@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {FakeHttpService} from '../../../fake-http.service';
+import {FakeHttpService} from '../../fake-http.service';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class DictionaryService {
 
   constructor(private http: FakeHttpService) {

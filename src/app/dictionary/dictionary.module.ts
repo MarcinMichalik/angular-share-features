@@ -3,10 +3,10 @@ import {NgModule} from '@angular/core';
 import {ButtonModule} from 'primeng/button';
 import {RippleModule} from 'primeng/ripple';
 import {TableModule} from 'primeng/table';
+import {DictionaryFormDialogComponent} from './dictionary-form-dialog/dictionary-form-dialog.component';
 import {DictionaryListPageComponent} from './dictionary-list-page/dictionary-list-page.component';
 
 import {DictionaryRoutingModule} from './dictionary-routing.module';
-import {DictionarySharedModule} from './dictionary-shared/dictionary-shared.module';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import {DictionarySharedModule} from './dictionary-shared/dictionary-shared.modu
     ButtonModule,
     RippleModule,
     TableModule,
-    DictionarySharedModule
+    DictionaryFormDialogComponent
   ],
 })
 export class DictionaryModule {

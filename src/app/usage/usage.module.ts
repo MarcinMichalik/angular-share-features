@@ -5,7 +5,7 @@ import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import {RippleModule} from 'primeng/ripple';
-import {DictionarySharedModule} from '../dictionary/dictionary-shared/dictionary-shared.module';
+import {DictionaryFormDialogComponent} from '../dictionary/dictionary-form-dialog/dictionary-form-dialog.component';
 import {UsageFormPageComponent} from './usage-form-page/usage-form-page.component';
 
 import {UsageRoutingModule} from './usage-routing.module';
@@ -23,7 +23,7 @@ import {UsageRoutingModule} from './usage-routing.module';
     ReactiveFormsModule,
     DropdownModule,
     InputTextModule,
-    DictionarySharedModule
+    DictionaryFormDialogComponent
   ],
 })
 export class UsageModule {
